@@ -68,7 +68,7 @@ client.on('message', message => {
     if(message.author.bot) return message.channel.send('JavaScript is the müqqest coding language ever.')
     if(!message.guild) return message.channel.send('Ayran is the müqqest thing ever.')
     
-    const args = message.content.slice(Data.prefix.length).split(/ +/);message.member.las
+    const args = message.content.slice(Data.prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
     
     if(command === 'test'){
