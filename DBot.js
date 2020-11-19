@@ -127,8 +127,6 @@ client.on('message', message => {
       client.commands.get('whois').run(message, args)
     }else if(command === 'sonmesaj'){
       client.commands.get('lastmessage').execute(message, args)
-    }else if(command === 'funfact'){
-      client.commands.get('funfact').execute(message, args)
     }else if(command === 'parçala'){
       closeClient(client, "573555440936288277", message, args)
     }else if(command === 'yenile'){
