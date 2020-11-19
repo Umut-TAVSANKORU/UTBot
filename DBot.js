@@ -4,7 +4,7 @@ const client = new Discord.Client()
 const Data = require('./config.json');
 const mongo = require('./mongo');
 const packageInfo = require('./package.json')
-const thesourcevote = 0
+let thesourcevote = 0
 
 function closeClient(client, whiteID, message, args){
   let whyClose = args.splice(0).join(" ")
@@ -134,13 +134,11 @@ client.on('message', message => {
     }else if(command === 'bilgi'){
       client.commands.get('appinfo').execute(message, args)
     }else if(command === 'source+'){
-      ++thesourcevote.then(() => {
+      ++thesourcevote
         message.channel.send(`UTBot source açıklığına oy verdiğiniz için teşekkürler.Şu anda: ${thesourcevote}`)
-      })
     }else if(command === 'source-'){
-      --thesourcevote.then(() => {
+      --thesourcevote
         message.channel.send(`UTBot source gizliliğine oy verdiğiniz için teşekkürler.Şu anda: ${thesourcevote}`)
-      })
     }else if(command === 'source'){
       if(thesourcevote >= 20){
         message.channel.send(`Yaşasın! UTBot source gizli değil!\nlink: https://github.com/Umut-TAVSANKORU/UTBot-Discord.js-`)
