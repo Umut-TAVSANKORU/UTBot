@@ -4,6 +4,7 @@ const client = new Discord.Client()
 const Data = require('./config.json');
 const mongo = require('./mongo');
 const packageInfo = require('./package.json')
+const thesourcevote = 0
 
 function closeClient(client, whiteID, message, args){
   let whyClose = args.splice(0).join(" ")
@@ -134,10 +135,20 @@ client.on('message', message => {
       restartClient(client, "573555440936288277", message, Data)
     }else if(command === 'bilgi'){
       client.commands.get('appinfo').execute(message, args)
-    }else if(command === 'emoji'){
-      message.channel.send('Hangi emoji hakkında bilgi istersin?').then(() => {
-        Discord.ReactionEmoji({})
+    }else if(command === 'source+'){
+      ++thesourcevote.then(() => {
+        message.channel.send(`UTBot source açıklığına oy verdiğiniz için teşekkürler.Şu anda: ${thesourcevote}`)
       })
+    }else if(command === 'source-'){
+      --thesourcevote.then(() => {
+        message.channel.send(`UTBot source gizliliğine oy verdiğiniz için teşekkürler.Şu anda: ${thesourcevote}`)
+      })
+    }else if(command === 'source'){
+      if(thesourcevote >= 20){
+        message.channel.send(`Yaşasın! UTBot source gizli değil!\nlink: https://github.com/Umut-TAVSANKORU/UTBot-Discord.js-`)
+      }else{
+        message.channel.send(`Henüz UTBot source herkese açık değil.<U>source+ yazıp açıklığına oy vermeyi unutmadın di mi?\nŞu anda: ${thesourcevote}`)
+      }
     }
     
   }catch(error){
