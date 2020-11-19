@@ -8,7 +8,7 @@ Like these:
 :two: `This bots code is based on UTBot's source maked by Umut Tavşankoru`
 :three: `This bots code is based on this code: (repository link)`
 # WHAT CODING LANGUAGE AND DISCORD API DOES UTBOT CODED IN?
-It's coded in JS(javascript) and in [discord.js](https://www.npmjs.com/package/discord.js?source=post_page-----7b5fe27cb6fa----------------------) API.It's written to be used in Turkish language, but it's vaiables are all English.Only shown things are Turkish, so you can easily use the bot's code for English, or another language.
+It's coded in JS(javascript) and in [discord.js](https://www.npmjs.com/package/discord.js?source=post_page-----7b5fe27cb6fa----------------------) API.It's written to be used in Turkish language, but it's variables are all English.Only shown things are Turkish, so you can easily use the bot's code for English, or another language.
 # QUESTIONS THAT YOU CAN ASK EASILY
 :one: :question: Why javascript and [discord.js](https://www.npmjs.com/package/discord.js?source=post_page-----7b5fe27cb6fa----------------------)
 :ok: Because the first tutorial I see is written is in this language.

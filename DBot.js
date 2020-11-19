@@ -65,16 +65,14 @@ client.on('voiceStateUpdate', (oldState, newState) => {
 client.on('message', message => {
   try{
     if(!message.content.startsWith(Data.prefix)) return
-    if(message.author.bot) return message.channel.send('JavaScript is the müqqest coding language ever.')
-    if(!message.guild) return message.channel.send('Ayran is the müqqest thing ever.')
+    if(message.author.bot) return message.channel.send('Ben botlara cevap vermiyorum karşim')
+    if(!message.guild) return message.channel.send('Sadece sunucudan gelen mesajlara yanıt verebiliyorum, bi sunucuya gitsen?')
     
     const args = message.content.slice(Data.prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
     
     if(command === 'test'){
-        client.commands.get('test').execute(message, args, client);
-    }else if(command === ''){
-      message.channel.send('lütfen bir komut gir.')
+      client.commands.get('test').execute(message, args, client);
     }else if(command === 'at'){
       client.commands.get('kick').execute(message, args)
     }else if(command === 'sban'){
@@ -99,14 +97,8 @@ client.on('message', message => {
       client.commands.get('unban').execute(message, args)
     }else if(command === 'canım'){
       client.commands.get('goddes').execute(message, args)
-    }else if(command === 'kart'){
-      client.commands.get('card').execute(message, args)
-    }else if(command === 'kart+'){
-      client.commands.get('cardbig').execute(message, args)
     }else if(command === 'vergi%'){
       client.commands.get('kdv').execute(message, args)
-    }else if(command === 'JsBasit'){
-      client.commands.get('jsbasic').execute(message, args)
     }else if(command === 'cevaplar'){
       client.commands.get('cevaps').execute(message, args)
     }else if(command === 'isimlendir'){
