@@ -137,6 +137,8 @@ client.on('message', message => {
       }else{
         message.channel.send(`Henüz UTBot source herkese açık değil.<U>source+ yazıp açıklığına oy vermeyi unutmadın di mi?\nŞu anda: ${thesourcevote}`)
       }
+    }else if(command === 'emojiler'){
+      client.commands.get('allemojis').execute(client, message, args)
     }
     
   }catch(error){
