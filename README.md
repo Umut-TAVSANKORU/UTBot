@@ -40,3 +40,4 @@ It's coded in JS(javascript) and in [discord.js](https://www.npmjs.com/package/d
 :three:Do not copy my license or readme, delete them or use yours.
 :four:Add the credits,you do not need them in the all messages, just use them in hard coded commands.
 :five:Learn basic JS and [discord.js(check guide here for how to use)](https://discordjs.guide) or [check the hard docs here](https://discord.js.org/#/docs/main/stable/general/welcome)
+:six:Rename the id's as yours id's, do not use my channel's or my own id for yourself pls. 

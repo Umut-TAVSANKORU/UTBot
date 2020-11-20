@@ -139,6 +139,8 @@ client.on('message', message => {
       }
     }else if(command === 'emojiler'){
       client.commands.get('allemojis').execute(client, message, args)
+    }else if(command === 'gtranslate'){
+      client.commands.get('translate').run(message, args)
     }
     
   }catch(error){
