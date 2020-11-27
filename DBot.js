@@ -141,6 +141,8 @@ client.on('message', message => {
       client.commands.get('allemojis').execute(client, message, args)
     }else if(command === 'gtranslate'){
       client.commands.get('translate').run(message, args)
+    }else if(command === "korona"){
+      client.commands.get("covid").execute(message, args)
     }
     
   }catch(error){
